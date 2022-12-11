@@ -1,5 +1,5 @@
 {% set name = "py-droplets" %}
-{% set version = "0.14.1" %}
+{% set version = "0.14.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/py-droplets-{{ version }}.tar.gz
-  sha256: 58a64594273f706ec3a37e1354e163387c49948c59154a3be552b8dc7254ebac
+  sha256: e721db0b9ddd78556e978e375c608f661f00dd1b61da17bc65d8ede7e02b0698
 
 build:
   noarch: python
@@ -36,7 +36,7 @@ test:
     - pip check
     # Check whether the pip version is reported correctly
     - pip list | grep -i {{ name }} | grep {{ version }}
-    
+
 about:
   home: https://github.com/zwicker-group/py-droplets
   summary: Python package for describing and analyzing droplets in experiments and simulations
