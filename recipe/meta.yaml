@@ -1,5 +1,5 @@
 {% set name = "py-droplets" %}
-{% set version = "0.18.1" %}
+{% set version = "0.18.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/py-droplets-{{ version }}.tar.gz
-  sha256: bdde26777bccfac15c16b07a3090612654ca167ba520fa0346552c2f36eb80fd
+  sha256: d36649d0e9152c3c43359cf418d63c429e94f8bdce871f078967417fd2fa58a9
 
 build:
   noarch: python
@@ -16,16 +16,16 @@ build:
 
 requirements:
   host:
-    - python >=3.8
+    - python >=3.8,<3.12
     - pip
     - setuptools_scm
   run:
-    - python >=3.8
     - matplotlib-base >=3.1.0
-    - numpy ==1.23
     - numba >=0.48.0
-    - scipy >=1.4.0
+    - numpy >=1.23
+    - python >=3.8,<3.12
     - py-pde >=0.26.0
+    - scipy >=1.4.0
 
 test:
   requires:
