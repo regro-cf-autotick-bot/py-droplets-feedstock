@@ -24,7 +24,7 @@ requirements:
     - numba >=0.48.0
     - numpy >=1.23
     - python >=3.8,<3.12
-    - py-pde >=0.26.0
+    - py-pde >=0.34.0
     - scipy >=1.4.0
 
 test:
